@@ -21,7 +21,7 @@ def modelo_prediccion(data):
 
 modelo = modelo_prediccion(data)
 
-mlflow.set_experiment('Prediccion-contaminacion')
+##mlflow.set_experiment('Prediccion-contaminacion')
 with mlflow.start_run():
     
     conda = {
