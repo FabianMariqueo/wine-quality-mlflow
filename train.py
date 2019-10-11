@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -34,4 +35,7 @@ with mlflow.start_run():
     }
 
     mlflow.sklearn.log_model(modelo, 'model', serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE, conda_env = conda)
-    print(mlflow.get_artifact_uri())
+    artifact_path = mlflow.get_artifact_uri()
+    artifact_path = artifact_path.replace("file://", "")
+
+    os.environ["MLFLOW-ARTIFACT-PATH"] = artifact_path
