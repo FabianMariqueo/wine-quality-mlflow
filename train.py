@@ -39,4 +39,7 @@ with mlflow.start_run():
     artifact_path = artifact_path.replace("file://", "")
     print(artifact_path)
 
-    os.environ["MLFLOW_ARTIFACT_PATH"] = artifact_path
+    f = open("mlflow_run.txt", "w")
+    f.write("mlflow models serve -m "+artifact_path+"/model -h 0.0.0.0 -p 1234")
+    f.close()
+    #os.environ["MLFLOW_ARTIFACT_PATH"] = artifact_path
