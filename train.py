@@ -39,4 +39,4 @@ with mlflow.start_run():
     artifact_path = artifact_path.replace("file://", "")
     print(artifact_path)
 
-    os.environ["MLFLOW-ARTIFACT-PATH"] = artifact_path
+    os.environ["MLFLOW_ARTIFACT_PATH"] = artifact_path
