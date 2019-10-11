@@ -34,3 +34,4 @@ with mlflow.start_run():
     }
 
     mlflow.sklearn.log_model(modelo, 'model', serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE, conda_env = conda)
+    print(mlflow.get_artifact_uri())
