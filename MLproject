@@ -3,6 +3,5 @@ name: tutorial
 conda_env: conda.yaml
 
 entry_points:
-  main:
-    parameters:
+  main:    
     command: "python train.py"
