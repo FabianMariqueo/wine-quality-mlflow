@@ -29,7 +29,7 @@ with mlflow.start_run():
         'name': 'mlflow-env',
         'channels': ['defaults'],
         'dependencies': [
-            'python=3.7.0',
+            'python=3.7.4',
             'scikit-learn=0.19.2'
         ]
     }
