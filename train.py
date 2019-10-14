@@ -34,7 +34,7 @@ with mlflow.start_run():
         ]
     }
 
-    mlflow.sklearn.log_model(modelo, 'model', serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE, conda_env = conda)
+    mlflow.sklearn.log_model(modelo, 'model', conda_env = conda)
     artifact_path = mlflow.get_artifact_uri()
     artifact_path = artifact_path.replace("file://", "")
     print(artifact_path)
